@@ -22,3 +22,11 @@ _Please follow the instructions in order to successfully run the backend_
 _The commands above should be able to successfully run the backend server. Please write me an email at `usamabinnadeem10@gmail.com` if there are any issues while configuring._
 
 ### Creating a new table using pgAdmin's interface
+
+![creatingtable1](https://user-images.githubusercontent.com/32700508/118643916-9be13e80-b7f6-11eb-90e4-37728a7d9c1f.PNG)
+
+### Database name and owner can be read from here
+![creatingtable2](https://user-images.githubusercontent.com/32700508/118643913-9a177b00-b7f6-11eb-8ef0-2d5244ce30d4.PNG)
+
+### This password needs to be remembered
+![passwordpgadmin](https://user-images.githubusercontent.com/32700508/118643918-9be13e80-b7f6-11eb-8804-7f96fb4d9b46.PNG)
