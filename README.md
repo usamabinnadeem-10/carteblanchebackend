@@ -19,6 +19,10 @@ _Please follow the instructions in order to successfully run the backend_
 1. Run `python manage.py migrate`
 1. Run `python manage.py runserver`
 
+**Bonus**
+
+You can access django's admin panel by first creating an admin user with the following command : `python manage.py createsuperuser` and visiting [localhost](http://127.0.0.1:8000/admin/) 
+
 _The commands above should be able to successfully run the backend server. Please write me an email at `usamabinnadeem10@gmail.com` if there are any issues while configuring._
 
 ### Creating a new table using pgAdmin's interface
