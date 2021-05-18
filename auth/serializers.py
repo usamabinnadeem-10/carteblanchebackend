@@ -13,7 +13,7 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
         data['refresh'] = str(refresh)
         data['access'] = str(refresh.access_token)
 
-        # Add extra responses here
+        # Adding extra fields to send back which identify the user
         data['id'] = self.user.id
         data['username'] = self.user.username
         return data

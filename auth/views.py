@@ -5,11 +5,12 @@ from rest_framework import generics
 from django.contrib.auth.models import User
 
 
+# when user needs to login or get their token refreshed
 class MyObtainTokenPairView(TokenObtainPairView):
     permission_classes = (AllowAny,)
     serializer_class = MyTokenObtainPairSerializer
 
-
+# registration endpoint
 class RegisterView(generics.CreateAPIView):
     queryset = User.objects.all()
     permission_classes = (AllowAny,)

@@ -9,7 +9,9 @@ from rest_framework.permissions import IsAuthenticated
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponseForbidden
 
-# Create your views here.
+""" only accessed by authenticated users
+    put, delete make sure that the requesting 
+    user is the same as the one in database """
 class AddTodo(APIView):
 
     permission_classes = (IsAuthenticated,)
@@ -36,6 +38,7 @@ class AddTodo(APIView):
 
         data = request.data.copy()
         obj = get_object_or_404(Todo, pk=data['id'])
+        # Forbidden if user does not own this object
         if obj.user != request.user:
             return HttpResponseForbidden()
 
@@ -57,6 +60,7 @@ class AddTodo(APIView):
 
         data = request.data.copy()
         obj = get_object_or_404(Todo, pk=data['id'])
+        # Forbidden if user does not own this object
         if obj.user != request.user:
             return HttpResponseForbidden()
 
@@ -68,6 +72,9 @@ class AddTodo(APIView):
             },status=status.HTTP_200_OK)
 
 
+""" get all todos for the requesting user
+    and sort them in descending order so 
+    new todos are the latest  """
 class GetTodos(APIView):
 
     permission_classes = (IsAuthenticated,)
